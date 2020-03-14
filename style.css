@@ -1,0 +1,99 @@
+.pricing-container {
+  margin: 50px 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  max-width: 800px;
+  line-height: 1;
+}
+
+.pricing-container .plan {
+  text-align: center;
+  background: linear-gradient(125deg, #36f4de, #4094d6);
+  margin: 0 8px;
+  flex: 1;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+  transition: 400ms;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-container .plan.best-value::after {
+  content: "Best";
+  position: absolute;
+  top: 4px;
+  right: -34px;
+  transform: rotate(40deg);
+  padding: 10px 48px;
+  font-weight: bold;
+  background: #c51e1e;
+  color: #fff;
+}
+
+.pricing-container h2 {
+  margin: 0;
+  font-size: 32px;
+  padding: 20px;
+  color: #143a46;
+}
+
+.pricing-container .price {
+  padding: 16px;
+  font-size: 36px;
+  font-weight: bold;
+  background: #222;
+  color: #eee;
+}
+
+.pricing-container .duration {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.pricing-container .features {
+  list-style: none;
+  font-size: 20px;
+  padding: 0;
+  color: #131313;
+}
+
+.pricing-container .features li {
+  margin: 16px 0;
+}
+
+.pricing-container .get-plan-btn {
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 24px;
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #292929;
+  border-radius: 8px;
+  padding: 8px 32px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 400ms;
+}
+
+/* Hover */
+
+.pricing-container .plan:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px 4px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-container .get-plan-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Media Queries */
+
+@media (max-width: 740px) {
+  .pricing-container {
+    flex-direction: column;
+  }
+
+  .pricing-container .plan {
+    margin: 16px 0;
+  }
+}
